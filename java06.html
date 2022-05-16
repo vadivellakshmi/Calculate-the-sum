@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate the sum of n + n/2 + n/4 + n/8 + .... - accept the number from the user</title>
+</head>
+<body>
+    
+
+    
+  <label>Calculate the sum of n + n/2 + n/4 + n/8 + .... - accept the number from the user</label>
+  <input type="number" id="txt">
+
+
+  <button class="btn">Click Me</button>
+ 
+
+  
+ 
+
+  <p class="output"></p>
+
+
+  <script>
+
+
+
+    let btnClick = document.querySelector('.btn');
+    btnClick.addEventListener('click', sumNumber);
+    function sumNumber() {
+      let num = document.getElementById('txt').value;
+
+      console.log(num);
+
+   
+  
+
+  
+    let s_sum = 0;
+    
+    while (num > 0) {
+      s_sum += num;
+        num = Math.floor(num / 2);
+    }
+      
+     let sum = s_sum
+        .toString()
+        .split('')
+        .map(Number)
+        .reduce(function (a, b) {
+            return a + b;
+        }, 0);
+      
+  
+
+      
+
+    document.querySelector('.output').innerHTML = "result is = " +sum;       
+}
+
+       
+
+   
+
+     
+     
+      
+
+
+
+  
+
+
+    
+
+  
+       
+       
+
+
+   
+
+
+
+  
+   
+
+
+
+
+
+  
+    
+
+  
+
+
+
+  </script>
+
+</body>
+</html>
